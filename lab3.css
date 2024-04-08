@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px; 
+    background-color: antiquewhite; 
+    font-size: 20px; 
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset, textarea{
+    height: 200px;
+    width: 400px;
+}
+
+table{
+    border-spacing: 10px;
+    
+}
+
+.part2{
+    padding: 3px;
+}
+tr{
+    height: 30px;
+}
+.submit{
+    margin-top: 20px;
+    margin-left: 335px;
+    
+}
+
+.submitb{
+    height: 30px;
+    width: 70px;
+    background-color: red;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.submitb:hover{
+    background-color: rgb(92, 92, 160);
+    height: 32px;
+    width: 74px;
+}
+
+.submitb:after{
+    background-color: rgb(92, 92, 160);
+}
+
+
+/* Media Query for screens smaller than 600px (phones) */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+}
+
+/* Media Query for screens between 601px and 1024px (tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .column {
+        flex: 1; /* Reset flex property for tablets */
+    }
+}
+
+/* Media Query for screens larger than 1024px (laptops) */
+@media screen and (min-width: 1025px) {
+    .column {
+        flex: 1; /* Reset flex property for laptops */
+    }
+}
+
+input{
+    text-align: left;
+ }
+
+video{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    ruby-align: center;
+}
+#drag-source {
+    width: 200px;
+    height: 100px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    cursor: move;
+}
+
+#drop-target {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 2px dashed #007bff;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 200px;
+}

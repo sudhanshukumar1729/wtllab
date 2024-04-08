@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Media with javascript</title>
+    <script src="lab3.js"></script>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+    <h1>
+        XYZ NATONAL AND INTERNATONAL TRAVELS
+    </h1>
+    <header>
+        <h2 class="Feedback">
+            Feedback
+        </h2>
+    </header>
+    
+    <section>
+        <form action="mailto:" method="post" enctype="text/plain" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <table>
+                <tr>
+                    <td>
+                        <label for="user1">
+                             First Name
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="user1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="user2">
+                            Last Name
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="user2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="contact">
+                            Contact
+                        </label>
+                    </td>
+                    <td>
+                        <input type="number" id="contact">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mail">
+                            Email Id
+                        </label>
+                    </td>
+                    <td>
+                        <input type="email" id="mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">
+                            Gender
+                        </label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="gender">Male
+                        <input type="radio" name="gender" id="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="program">Program</label>
+                    </td>
+                    <td>
+                        <select name="program" id="program">
+                            <option value="Program">Program</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="M.Tech">M.Tech</option>
+                            <option value="Ph.D">Ph.D</option>
+                            <option value="BCA">BCA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="file1">
+                           File
+                        </label>
+                    </td>
+                    <td>
+                        <input type="file" name="file1" id="file1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="img2">
+                           Image
+                        </label>
+                    </td>
+                    <td>
+                        <input type="image" name="img2" id="img2">
+                    </td>
+                </tr>
+                
+                
+            </table>
+
+        <div class="part2">
+            <p>Please rate us out of 100</p>
+            <input type="range" id="a" value="0">
+            <input type="number" id="b" value="0">
+            <output name="x" for="a b"></output>
+            
+            <Fieldset>
+                <legend>
+                    Comment
+                </legend>
+                <textarea name="Text1" cols="40" rows="5"></textarea>
+            </Fieldset>
+            <br>
+            <tr>
+                <td>
+                    <label for="check">
+                        Submit anonymously
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="check">
+                </td>
+            </tr>
+        </div>
+            <div class="submit">
+                <Button class="submitb">
+                    Submit
+                </Button>
+            </div>
+            
+        </form>
+        
+    </section>
+    
+</body>
+</html>

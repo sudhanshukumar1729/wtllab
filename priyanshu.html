@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+
+<body>
+    <header>
+        <img class="img1" src="315160.png" alt="error" height="100" width="100" float:left>
+
+        <h1>PRIYANSHU NIRANJAN</h1>
+        <h2 id="menu">-</h2>
+        <div style="height: 30px; margin-left: 20%;"><img src="phone.jfif" alt="" height="15px"
+                width="15px">91-xxxxx-yyyyy
+            <img src="mail.png" alt="" height="15px" width="15px"> xyz@gmail.com
+            <img src="git.png" alt="" height="15px" width="20px"> Icopiedyourhtml1729github.io
+            <img src="leetcode.jfif" alt="" height="15px" width="15px">leetcode.com/profile
+            <img src="twitter.jfif" alt="" height="15px" width="15px">twitter
+        </div>
+    </header>
+    <hr>
+    <div>
+        <h3>About Me</h2>
+            <p>An aspiring web developer alognwith competitive programmer on leetcode and geeksforgeeks with more than
+                700 question solved on these
+                platfom.
+            </p>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Languages</h3>
+        <table style="border-spacing: 5px;">
+            <tr>
+                <th>Language</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>Bilingual</td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>Native</td>
+            </tr>
+            <tr>
+                <td>Telugu</td>
+                <td>Native</td>
+            </tr>
+        </table>
+
+    </div>
+    <hr>
+    <div>
+        <h3>Education</h3>
+        <table style="border-spacing: 20px;">
+            <tr>
+                <th>Organization</th>
+                <th>Course</th>
+                <th>Board</th>
+                <th>Year of Passing</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Defence Labs School, Hyderabad</td>
+                <td>Matriculation</td>
+                <td>CBSE</td>
+                <td>2019</td>
+                <td>93.4%</td>
+            </tr>
+            <tr>
+                <td>FIITJEE Junior School, Hyderabad</td>
+                <td>Intermediate</td>
+                <td>TSBIE</td>
+
+                <td>2021</td>
+                <td>97.4%</td>
+
+            </tr>
+            <tr>
+                <td>PTU Puducherry</td>
+                <td>B.Tech, CSE</td>
+                <td>PTU</td>
+                <td>*2025(expected)</td>
+                <td>9.2 CGPA</td>
+
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <h3>Technical Skills</h3>
+        <ol>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Web Development</li>
+            <li>Mobile Application Development</li>
+            <li>MySQL</li>
+            <li>C#</li>
+
+        </ol>
+    </div>
+    <hr>
+    <div>
+        <h3>Projects</h3>
+        <ol>
+            <li>
+                <strong>Mobile App for Calorie Calculator</strong>
+                <p>
+                    Calculates almost 90% calorie consumption on the basis of consumer diet.
+                </p>
+                <p>
+                    Suggest 85% accurate diet according to consumer's need.
+                </p>
+                <p>
+                    Reduce consumer's manual calculation by 100%.
+                </p>
+            </li>
+            <li>
+                <strong>Smart Task Manager</strong>
+                <p>Calculate memory and CPU usage of tasks effiecintly.</p>
+                <p>List out all task using more than 5% memory</p>
+                <p>Finds all tasks utilizing more than 20% CPU</p>
+            </li>
+        </ol>
+    </div>
+    <hr>
+    <div>
+        <h3>Experience</h3>
+        <strong>
+            <p>Web Developer Intern at XYZ Coorpotation</p>
+        </strong>
+        <p>January 2024 - February 2024</p>
+        <p>Worked as front end developer</p>
+    </div>
+    <hr>
+    <footer>
+        <p>Date: 03 March 2024</p>
+    </footer>
+
+    <h1>Find my location</h1>
+    <p>Click on the play button to play the video:</p>
+    <video controls>
+        <source src="sl11.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <form>
+        <input type="submit" value="↓" onclick="print()">
+    </form>
+
+    <button onclick="getLocation()">Find My Location</button>
+    <p id="demo"></p>
+    <!-- <div id="map"></div> -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        function print() {
+            document.write("You were tricked !, press the next one");
+        }
+
+        const x = document.getElementById("demo");
+        const map = L.map('map').setView([0, 0], 2); // Initialize the map with a default view
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            x.innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+            map.setView([latitude, longitude], 12); // Set map view to user's location
+            L.marker([latitude, longitude]).addTo(map)
+                .bindPopup("Your Location").openPopup(); // Add a marker at the user's location
+        }
+    </script>
+
+    <h1>Lets Connect !</h1>
+    <p style="color: brown; text-align: center;">Send Over your details to connect with me.</p>
+    <br>
+    <form action="submit.html" onsubmit="callme()">
+        Name:<br>
+        <input id="name" type="text">
+        <br>
+        Adress:<br>
+        <input id="Linkedln ID" type="text">
+        <br>
+        Linkedln ID<br>
+        <input id="email" type="email">
+        <br>
+        Phone:<br>
+        <input id="phone" type="number">
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" name="Reset">
+    </form>
+    <script>
+        function callme() {
+            var name = document.getElementById('name').value;
+            localStorage.setItem('name', name);
+            var address = document.getElementById('address').value;
+            localStorage.setItem('address', address);
+            var email = document.getElementById('email').value;
+            localStorage.setItem('email', email);
+            var phone = document.getElementById('phone').value;
+            localStorage.setItem('phone', phone);
+
+        }
+    </script>
+    <h1 style="text-align: left;">"OR Try sharing Data through pdf format"</h1>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+</body>
+
+<body>
+
+    <div id="drag-source" draggable="true">Your Details</div>
+    <div id="drop-target">Drop Here</div>
+
+    <h1>Total View Count</h1>
+    <button onclick="startCalculation()">Click to find it </button>
+    <div id="result"></div>
+    <script>
+        function startCalculation() {
+            // Create a new web worker
+            const worker = new Worker('worker.js');
+
+            // Listen for messages from the worker
+            worker.onmessage = function (event) {
+                document.getElementById('result').textContent = 'Total Views: ' + event.data;
+            };
+
+            // Start the calculation
+            worker.postMessage('start');
+        }
+        const dragSource = document.getElementById('drag-source');
+        const dropTarget = document.getElementById('drop-target');
+
+        dragSource.addEventListener('dragstart', function (event) {
+            event.dataTransfer.setData('text/plain', 'Succesfully send your details!');
+        });
+
+        dropTarget.addEventListener('dragover', function (event) {
+            event.preventDefault(); // Prevent default behavior to enable drop
+        });
+
+        dropTarget.addEventListener('drop', function (event) {
+            event.preventDefault(); // Prevent default behavior
+            const data = event.dataTransfer.getData('text/plain'); // Get data from drag event
+            event.target.textContent = data; // Set dropped data to the drop target
+        });
+    </script>
+
+</body>
+
+
+</html>

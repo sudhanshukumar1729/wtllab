@@ -1,0 +1,44 @@
+<script src="app.js"></script>
+    <link rel="stylesheet" href="styles2.css">
+
+function incByTwo(params) {
+    return params + 2;
+}
+
+function incByThree(params) {
+    return params + 3;
+}
+
+let a = 45;
+const b = 46;
+if (incByTwo(a) == b) {
+    console.log("true");
+}
+else if (incByThree(a) == b) {
+    console.log("Three");
+}
+else {
+    console.log("false");
+}
+
+if (incByThree(a) == b) {
+    console.log("true");
+}
+else {
+    console.log("false");
+}
+
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
